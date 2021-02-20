@@ -7,10 +7,16 @@ use Mr687\ZoomMeeting\Supports\Request;
 
 class ZoomUser extends Request
 {
-  public function list()
+  public function listUsers()
   {
     return $this->path('users')
       ->get();
+  }
+
+  public function createUser(array $data)
+  {
+    return $this->path('users', $data)
+      ->post();
   }
 
   public function listMeetings(string $userId)
