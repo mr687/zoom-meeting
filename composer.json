@@ -1,6 +1,6 @@
 {
     "name": "mr687/zoom-meeting",
-    "description": "Your Package Description here",
+    "description": "Zoom Meeting API for Laravel",
     "type": "library",
     "license": "MIT",
     "keywords": [
