@@ -1,0 +1,59 @@
+{
+    "name": "mr687/zoom-meeting",
+    "description": "Your Package Description here",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "zoom",
+        "api",
+        "meeting",
+        "laravel"
+    ],
+    "authors": [{
+        "name": "daphinokio",
+        "email": "daphinokioo@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "firebase/php-jwt": "^5.2"
+    },
+    "require-dev": {
+        "symfony/thanks": "^1.0",
+        "phpunit/phpunit": "^7.4@dev",
+        "mockery/mockery": "^1.0@dev",
+        "orchestra/testbench": "^3.8@dev",
+        "orchestra/database": "^3.8@dev",
+        "illuminate/support": "^5.8@dev",
+        "fzaninotto/faker": "^1.9@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mr687\\ZoomMeeting\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mr687\\ZoomMeeting\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mr687\\ZoomMeeting\\Providers\\ZoomMeetingServiceProvider"
+            ],
+            "aliases": {
+                "ZoomMeeting": "Mr687\\ZoomMeeting\\Facades\\ZoomMeetingFacade",
+                "ZoomUser": "Mr687\\ZoomMeeting\\Facades\\ZoomUserFacade"
+            }
+        }
+    }
+}
