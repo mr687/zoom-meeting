@@ -2,7 +2,6 @@
 
 namespace Mr687\ZoomMeeting\Classes;
 
-use Illuminate\Support\Collection;
 use Mr687\ZoomMeeting\Supports\Request;
 
 class ZoomUser extends Request
@@ -15,7 +14,9 @@ class ZoomUser extends Request
 
   public function createUser(array $data)
   {
-    return $this->path('users', $data)
+    // Only for Zoom PRO or Higher Plan
+    return $this->path('users')
+      ->fields($data)
       ->post();
   }
 
