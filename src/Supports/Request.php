@@ -62,7 +62,7 @@ abstract class Request
       return $this;
     }
 
-    if (in_array($method, ['get', 'post', 'patch', 'put'])) {
+    if (in_array($method, ['get', 'post', 'patch', 'put', 'delete'])) {
       return $this->request($method);
     }
   }
