@@ -12,7 +12,7 @@ class ZoomMeeting extends Request
       ->get();
   }
 
-  public function delete(string $meetingId)
+  public function destroy(string $meetingId)
   {
     return $this->path("meetings/{$meetingId}")
       ->delete();
